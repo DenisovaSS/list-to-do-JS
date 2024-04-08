@@ -6,12 +6,11 @@ let users = [];
 document.addEventListener('DOMContentLoaded', initApp);
 //Basic logic
 function getUserName(userId) {
-  console.log(users);
   const user = users.find((u) => u.id === userId);
   return user.name;
 }
 
-function printTodo(id, userId, title, complete) {
+function printTodo({ id, userId, title, complete }) {
   const li = document.createElement('li');
   li.className = 'todo-item';
   li.dataset.id = id;
